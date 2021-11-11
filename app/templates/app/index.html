@@ -5,7 +5,7 @@ INDEX.HTML
 {% endblock %}
 	
 {% block body %}
-	    <!---OFFERS AND CATEGORIES CARD LIST HORIZONTALLT SCORALLABLE-->
+	<!---OFFERS AND CATEGORIES CARD LIST HORIZONTALLT SCORALLABLE-->
     <div class="container-fluid my-5 p-4 bg-light">
         <div class="container">
             <div class="d-flex flex-row flex-nowrap overflow-auto p-2" id="flex-card-row">
@@ -68,7 +68,8 @@ INDEX.HTML
         </div>
     </div>
 
-	    <!--HOT DEALS CAROUSEL-->
+	
+    <!--HOT DEALS CAROUSEL-->
     <div class="container-fluid">
         <div class="row justify-content-center mb-3">
             <span class="text-center font-weight-bold">HOT DEALS</span>
@@ -82,11 +83,57 @@ INDEX.HTML
         </div>
     </div>
 
-	    <!---SELF PRAISE JUMBOTRON-->
-    <div class="jumbotron jumbotron-fluid bg-warning justify-content-center overflow-hidden my-5">
+	<!---SELF PRAISE JUMBOTRON-->
+    <div class="jumbotron jumbotron-fluid bg-danger justify-content-center overflow-hidden mt-5">
         <div class="container text-white text-center">
           <h1 class="display-lg-4 display-sm-2 display-xs-1">Self Praise Title</h1>
           <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     </div>
+
+    
+    <!--DESIGN OF THE DAY/SEASONAL JUMBOTRON-->
+    <div class="jumbotron bg-warning text-dark mb-5">
+        <div class="container text-center">
+            <h1 class="display-4">Some Festive/Seasonal Offer</h1>
+            <p class="lead">Offer Description.</p>
+            <hr class="my-4 bg-light">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p class="lead text-center">
+                <a class="btn btn-light btn-lg" href="#" role="button">Shop Now</a>
+            </p>
+        </div>
+    </div>
+
+    <!--WHAT's NEW SCROLABLE CAROUSEL -->
+    <div class="container-fluid">
+        <div class="row justify-content-center mb-3">
+            <span class="text-center font-weight-bold">WHAT'S NEW</span>
+        </div>
+        <div class="gallery js-flickity mb-5" data-flickity-options='{ "freeScroll": true, "wrapAround": true, "groupCell":3 }'>
+            <div class="gallery-cell wfull bg-light">1</div>
+            <div class="gallery-cell wfull bg-primary">2</div>
+            <div class="gallery-cell wfull bg-warning">3</div>
+            <div class="gallery-cell wfull bg-danger">4</div>
+            <div class="gallery-cell wfull bg-success">5</div>
+        </div>
+        <div class="text-center mt-2">
+            <a class="text-dark" href="#"><u>VIEW ALL</u></a> 
+        </div>
+    </div>
+
+    <!--CATEGORIES GRID-->
+    <div class="container-fluid">
+        <h1>Responsive Bootstrap Columns</h1>
+        <div class="row">
+          <div class="col-sm-2 mx-2 my-4" style="background-color:pink;">.col-sm-2</div>
+          <div class="col-sm-2 mx-2 my-4" style="background-color:orange;">.col-sm-2</div>
+          <div class="col-sm-2 mx-2 my-4" style="background-color:pink;">.col-sm-2</div>
+          <div class="col-sm-2 mx-2 my-4" style="background-color:orange;">.col-sm-2</div>
+          <div class="col-sm-2 mx-2 my-4" style="background-color:pink;">.col-sm-2</div>
+          <div class="col-sm-2 mx-2 my-4" style="background-color:orange;">.col-sm-2</div>
+        </div>
+    </div>
+      
+
 {% endblock %}
