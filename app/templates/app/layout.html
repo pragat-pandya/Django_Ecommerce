@@ -19,19 +19,199 @@
 			It's the layout.html
 		{% endblock %}
 
-    </title>
+  </title>
 
-	<!--CUSTOM CSS+BOOTSTRAP-->
-	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style media="screen">
+  .nav-link {
+      text-decoration: none;
+      color: black;
+  }
+  .nav-link:hover {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+  }
+  .footer-hr {
+      width: 75%;
+      height: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+
+  }
+  .footer-links {
+      text-decoration: none;
+      color: white;
+  }
+  .footer-links:hover {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+  }
+  .footer-bar {
+      background-color: #181818;
+  }
+  #Nav {
+      background-color: #eeee;
+  }
+  .ugly {
+      text-decoration: none;
+      color: black;
+      opacity: 0.5;
+      font-size: small;
+  }
+  .ugly:hover {
+      text-decoration: none;
+      color: black;
+      opacity: 0.75;
+  }
+  #search {
+      text-align: center;
+      margin-right: 5px;
+  }
+  .navbar-links {
+      text-decoration: none;
+      color: black;
+  }
+  .navbar-links:hover {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+  }
+  .wfull {
+      width: 33%;
+      height: 45vh;
+      text-align: center;
+  }
+
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.hovereffect .overlay {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 4.75em;
+	background: #79FAC4;
+	color: #3c4a50;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	visibility: hidden;
+
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+.hovereffect:hover img {
+-webkit-transform: translate3d(0,-10%,0);
+	transform: translate3d(0,-10%,0);
+}
+
+.hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+	float: left;
+	margin: 0px;
+	display: inline-block;
+}
+
+.hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+	color: #fff;
+	border: 1px solid #fff;
+	margin: 50px 0 0 0;
+	background-color: transparent;
+}
+.hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+
+.hovereffect p.icon-links a {
+	float: right;
+	color: #3c4a50;
+	font-size: 1.4em;
+}
+
+.hovereffect:hover p.icon-links a:hover,
+.hovereffect:hover p.icon-links a:focus {
+	color: #252d31;
+}
+
+.hovereffect h2,
+.hovereffect p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+	visibility: visible;
+}
+
+.hovereffect p.icon-links a span:before {
+	display: inline-block;
+	padding: 8px 10px;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.hovereffect:hover .overlay,
+.hovereffect:hover h2,
+.hovereffect:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.hovereffect:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.hovereffect:hover p.icon-links a:first-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+  </style>
+	<!--BOOTSTRAP-->
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
 	<!--FLICKIT CSS-->
-    <link rel="stylesheet" href="{% static 'css/flickit.css' %}">
-    <!--BOOTSTRAP JS PACKAGE LINKED LOCALLY-->
-	<script type="text/javascript" href="{% static 'js/bootstrap.js' %}"></script>
-    <!--FLICKIT JAVASCRIPT-->
-    <script type="text/javascript" src="{% static 'js/flickit.js' %}"></script>
-    <!--FONT AWESOME CDN ICON KIT-->
-    <script src="https://kit.fontawesome.com/1dd04b140c.js" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="{% static 'bootstrap/css/flickit.css' %}">
 </head>
 
 <!--BODY IS HERE-->
@@ -61,11 +241,12 @@
     </div>
   </div>
 
+
   <!--NAVIGATION BAR-->
   <div class="container-fluid p-0 border-bottom">
     <div class="container">
         <nav class="navbar navbar-expand-lg p-lg-1">
-                <button class="navbar-toggler p-0 mt-2" type="button" data-toggle="collapse" data-target="#navContent" aria-expanded="false" aria-controls="navContent">
+                <button class="navbar-toggler p-0 mt-2" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
 
@@ -104,33 +285,6 @@
 
   </div>
 
-
-  <!--MEN WOMEN ASSECORIES FANBOOK Sitemap Slider-->
-  <div class="container my-2 justify-content-center">
-    <div class="row p-0">
-        <div class="overflow-hidden col-3 text-center border-bottom border-warning p-lg-2">
-            <a href="#" class="navbar-links">MEN</a>
-        </div>
-        <div class="overflow-hidden col-3 text-center p-lg-2">
-            <a href="#" class="navbar-links">WOMEN</a>
-        </div>
-        <div class="overflow-hidden col-3 text-center p-lg-2">
-            <a href="#" class="navbar-links">ACCESSORIES</a>
-        </div>
-        <div class="overflow-hidden col-3 text-center p-lg-2">
-            <a href="#" class="navbar-links">FANBOOK</a>
-        </div>
-    </div>
-  </div>
-
-  <!--CAROUSEL OFFERS-->
-  <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true, "groupCell":3 }'>
-    <div class="gallery-cell wfull bg-light">1</div>
-    <div class="gallery-cell wfull bg-primary">2</div>
-    <div class="gallery-cell wfull bg-warning">3</div>
-    <div class="gallery-cell wfull bg-danger">4</div>
-    <div class="gallery-cell wfull bg-success">5</div>
-  </div>
 
   <!--JINJA BLOCK FOR PLUGING IN CONTENT INTO TEMPLATE-->
 	{% block body %}
@@ -204,6 +358,14 @@
             </div>
         </div>
     </footer>
+    <!--JQUERY-->
+    <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+    <!--BOOTSTRAP JS-->
+    <script type="text/javascript" href="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <!--FLICKIT JAVASCRIPT-->
+    <script type="text/javascript" src="{% static 'bootstrap/js/flickit.js' %}"></script>
+    <!--FONT AWESOME CDN ICON KIT-->
+    <script src="https://kit.fontawesome.com/1dd04b140c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
