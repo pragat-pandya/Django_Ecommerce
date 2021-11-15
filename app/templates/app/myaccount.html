@@ -1,0 +1,57 @@
+{% extends 'app/layout.html' %}
+
+{% block title %} My Profile {% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1 class="mt-2 mt-md-2 mt-sm-2 mt-lg-5 mt-xl-5 mt-xxl-5 fs-2"><span class="border-bottom border-warning border-2">My Account</span></h1>
+    <ul class="row p-3 mt-sm-2 mt-2 mt-lg-5 mt-xl-5 mt-xxl-5 list-group list-group-horizontal">
+      <li class="col-12 col-md-12 col-sm-12 col-lg-3 list-group-item border-0">
+        <div class="border-end">
+          <a class="text-decoration-none text-dark" href="#">
+            <span class="fs-5">My Orders</span>
+            <span class="ugly fs-5">></span>
+            <span class="ugly d-block">View, modify and track orders</span>
+          </a>
+        </div>
+      </li>
+      <li class="col-12 col-md-12 col-sm-12 col-lg-3 list-group-item border-0">
+        <div class="border-end">
+          <a class="text-decoration-none text-dark" href="#">
+            <span class="fs-5">My Payments</span>
+            <span class="ugly fs-5">></span>
+            <span class="ugly d-block">View, modify payment methods</span>
+          </a>
+        </div>
+      </li>
+      <li class="col-12 col-md-12 col-sm-12 col-lg-3 list-group-item border-0">
+        <div class="border-end">
+          <a class="text-decoration-none text-dark" href="#">
+            <span class="fs-5">My Addresses</span>
+            <span class="ugly fs-5">></span>
+            <span class="ugly d-block">Edit, add or remove addresses</span>
+          </a>
+        </div>
+      </li>
+      <li class="col-12 col-md-12 col-sm-12 col-lg-3 list-group-item border-0">
+        <div class="border-end">
+          <a class="text-decoration-none text-dark" href="{% url 'myprofile' %}">
+            <span class="fs-5">My Profile</span>
+            <span class="ugly fs-5">></span>
+            <span class="ugly d-block text-wrap">Edit personal info, change password</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <hr class="m-0">
+
+    <div class="row my-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 bg-light text-center">
+          <img class="img-fluid fanbook-img" src="https://sc02.alicdn.com/kf/Ue2af7df50a7e4c6f9bbe00c3166b1fc0J.jpg" alt="">
+          <a href="{% url 'index' %}">
+            <button type="button" class="mt-3 btn btn-lg btn-outline-primary" name="button">CONTINUE SHOPPING</button>
+          </a>
+        </div>
+    </div>
+  </div>
+{% endblock %}

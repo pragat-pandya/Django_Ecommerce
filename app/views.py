@@ -11,3 +11,11 @@ def index (request):
 # Fanbook View
 def fanbook (request):
     return render (request, "app/fanbook.html")
+
+# My Account View
+def user_account (request):
+    return render(request, "app/myaccount.html")
+
+# My Profile VIEW
+def user_profile (request):
+    return render (request, "app/myprofile.html")
