@@ -213,11 +213,13 @@
 	<!--FLICKIT CSS-->
   <link rel="stylesheet" href="{% static 'bootstrap/css/flickit.css' %}">
   <!--POPPER-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/cjs/popper.min.js" integrity="sha512-cccYINs21/woK1lZ16XmqaT6ohTy4BxrsgGrxnU3SEVKQACVUcU6nyPXb4meW0TG9TN9zj7OqaFK3E+ckKtmZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--BOOTSTRAP5 JS-->
   <script src="{% static 'bootstrap/js/bootstrap.js' %}" charset="utf-8"></script>
   <!--FLICKIT JS-->
   <script src="{% static 'bootstrap/js/flickit.js' %}" charset="utf-8"></script>
+  <!--FONT AWESOME ICON KIT-->
+  <script src="https://kit.fontawesome.com/1dd04b140c.js" crossorigin="anonymous"></script>
 </head>
 
 <!--BODY IS HERE-->
@@ -248,48 +250,53 @@
   </div>
 
 
-  <!--NAVIGATION BAR-->
-  <div class="container-fluid p-0 border-bottom">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg p-lg-1">
-                <button class="navbar-toggler p-0 mt-2" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
-
-                <a href="#" class="navbar-brand bg-light">BrandName</a>
-
-                <div class="collapse navbar-collapse" id="navContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item mr-auto">
-                            <a href="#" class="nav-link">MEN</a>
-                        </li>
-                        <li class="nav-item mr-auto">
-                            <a href="#" class="nav-link">WOMEN</a>
-                        </li>
-                        <li class="nav-item mr-auto">
-                            <a href="#" class="nav-link">MOBILE COVERS</a>
-                        </li>
-                    </ul>
-
-                    <form class="form-inline my-auto my-lg-0 mr-auto" action="JAVASCRIPT-FUNCTION">
-                        <span id="search" class="mb-2">
-                            <i class="fas fa-lg fa-search"></i>
-                        </span>
-                        <input class="form-control mr-sm-2 ml-lg-2 mb-2" type="search" placeholder="Search for products, categories, etc">
-                        <button class="btn btn-outline-warning mb-2" type="submit">Search</button>
-                    </form>
-                </div>
-                <a href="#" class="font-weight-bold navbar-links mr-2">Login</a>
-                <div class="border-left border-dark p-2">
-                    <a href="#" class="navbar-links "><i class="mr-1 far fa-lg fa-heart"></i></a>
-                </div>
-                <div class="border-left">
-                    <a href="#" class="navbar-links"><i class="fas fa-lg fa-shopping-bag"></i></a>
-                </div>
-        </nav>
-      </div>
-
-  </div>
+      <!--NAVIGATION BAR-->
+      <nav class="p-0 border-bottom container-fluid navbar navbar-expand-lg p-lg-1">
+        <div class="container">
+          <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+          <a class="navbar-brand bg-light" href="#">BrandName</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">MEN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">WOMEN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">MOBILE COVERS</a>
+              </li>
+              <li class="d-none d-sm-none d-lg-block d-xl-block d-xxl-block nav-item px-lg-3 px-xl-5 px-xxl-5">
+                <form class="d-flex text-center my-auto mr-auto" action="JAVASCRIPT FUNCTION">
+                  <span id="search" class="mt-1">
+                      <i class="fas fa-lg fa-search"></i>
+                  </span>
+                  <input class="form-control me-2" type="search" placeholder="Search for products, categories, etc." aria-label="Search">
+                  <button class="btn btn-outline-warning ml-1" type="submit">Search</button>
+                </form>
+              </li>
+            </ul>
+            <form class="d-lg-none d-flex text-center my-2 mr-auto" action="JAVASCRIPT FUNCTION">
+              <span id="search" class="mt-1">
+                  <i class="fas fa-lg fa-search"></i>
+              </span>
+              <input class="form-control me-2" type="search" placeholder="Search for products, categories, etc." aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="ml-auto">
+            <a href="#" class="navbar-links px-lg-1"><b>Login</b></a>
+            <div class="d-inline border-left border-start border-dark p-1">
+                <a href="#" class="navbar-links "><i class="mr-1 far fa-lg fa-heart"></i></a>
+            </div>
+            <div class="d-inline mr-1">
+                <a href="#" class="navbar-links"><i class="fas fa-lg fa-shopping-bag"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
 
   <!--JINJA BLOCK FOR PLUGING IN CONTENT INTO TEMPLATE-->
@@ -364,14 +371,6 @@
             </div>
         </div>
     </footer>
-    <!--JQUERY-->
-    <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
-    <!--BOOTSTRAP JS-->
-    <script type="text/javascript" href="{% static 'bootstrap/js/bootstrap.js' %}"></script>
-    <!--FLICKIT JAVASCRIPT-->
-    <script type="text/javascript" src="{% static 'bootstrap/js/flickit.js' %}"></script>
-    <!--FONT AWESOME CDN ICON KIT-->
-    <script src="https://kit.fontawesome.com/1dd04b140c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
