@@ -19,3 +19,11 @@ def user_account (request):
 # My Profile VIEW
 def user_profile (request):
     return render (request, "app/myprofile.html")
+
+# Login and Signup VIEW
+def user_login (request):
+    return render (request, "app/login.html")
+
+# SIGNUP View
+def user_signup (request):
+    return render (request, "app/signup.html")
