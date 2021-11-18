@@ -35,3 +35,7 @@ def user_orders (request):
 # MyPayments view
 def user_payments (request):
     return render (request, "app/mypayments.html")
+
+# MyAddresses views
+def user_addresses (request):
+    return render (request, "app/myaddresses.html")
