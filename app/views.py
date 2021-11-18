@@ -27,3 +27,7 @@ def user_login (request):
 # SIGNUP View
 def user_signup (request):
     return render (request, "app/signup.html")
+
+# MyOrders view
+def user_orders (request):
+    return render (request, "app/myorders.html")
