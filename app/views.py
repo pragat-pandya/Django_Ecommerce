@@ -31,3 +31,7 @@ def user_signup (request):
 # MyOrders view
 def user_orders (request):
     return render (request, "app/myorders.html")
+
+# MyPayments view
+def user_payments (request):
+    return render (request, "app/mypayments.html")
