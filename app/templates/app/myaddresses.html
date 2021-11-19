@@ -5,5 +5,64 @@
 {% block style %} {% endblock %}
 
 {% block body %}
-  <h1>This is myaddresses.html</h1>
+  <div class="container p-3">
+    <a href="{% url 'myaccount' %}" class="link-success text-decoration-none fs-5"> < Back to My Account</a>
+    <h1 class="mt-2 mt-md-2 mt-sm-2 mt-lg-5 mt-xl-5 mt-xxl-5 fs-2"><span class="border-bottom border-warning border-2">My Addresses</span></h1>
+    <div class="row mt-5">
+      <div class="col-lg-4 col-xl-4 col-xxl-4 col-md-6 col-sm-12 col-12 p-4 justify-content-center">
+        <section class="border rounded p-2">
+          <div class="d-flex flex-wrap">
+            <p class="fw-bold">Firstname Lname</p>
+            <button type="button" name="button" class="bg-light py-0 ms-auto btn btn-outline-primary" disabled style="font-size: .65em;">TYPE</button>
+          </div>
+          <p>Address Locality Landmark</p>
+
+          <div class="mt-5">
+            <p class="lh-1 fw-light">
+              Cityname, PINCODE
+            </p>
+            <p class="lh-1 fw-light">
+              Contact Number: 0000000000
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <a href="#" class="text-decoration-none my-1">Edit</a>  <span> | </span><a href="#" class="text-decoration-none">Remove</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4 col-xl-4 col-xxl-4 col-md-6 col-sm-12 col-12 p-4 justify-content-center">
+        <section class="border rounded p-2">
+          <div class="d-flex flex-wrap">
+            <p class="fw-bold">Firstname Lname</p>
+            <button type="button" name="button" class="bg-light py-0 ms-auto btn btn-outline-primary" disabled style="font-size: .65em;">TYPE</button>
+          </div>
+          <p>Address Locality Landmark</p>
+
+          <div class="mt-5">
+            <p class="lh-1 fw-light">
+              Cityname, PINCODE
+            </p>
+            <p class="lh-1 fw-light">
+              Contact Number: 0000000000
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <a href="#" class="text-decoration-none my-1">Edit</a>  <span> | </span><a href="#" class="text-decoration-none">Remove</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4 col-xl-4 col-xxl-4 col-md-6 col-sm-12 col-12 p-4 justify-content-center">
+        <section class="border rounded p-2 text-center p-5">
+          <a href="#" class="link text-decoration-none">
+            <h1 class="my-0">+</h1>
+            <h5 class="my-0">ADD NEW ADDRESS</h5>
+          </a>
+        </section>
+      </div>
+    </div>
+  </div>
 {% endblock %}
