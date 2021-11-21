@@ -11,4 +11,5 @@ urlpatterns = [
     path("myorders", views.user_orders, name="myorders"),
     path("mypayments", views.user_payments, name="mypayments"),
     path("myaddresses", views.user_addresses, name="myaddresses"),
+    path("wishlist", views.user_wishlist, name="wishlist")
 ]

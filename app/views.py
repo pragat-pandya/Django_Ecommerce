@@ -39,3 +39,7 @@ def user_payments (request):
 # MyAddresses views
 def user_addresses (request):
     return render (request, "app/myaddresses.html")
+
+# MyWishlist view
+def user_wishlist (request):
+    return render (request, "app/wishlist.html")
