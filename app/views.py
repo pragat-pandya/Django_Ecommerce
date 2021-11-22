@@ -43,3 +43,8 @@ def user_addresses (request):
 # MyWishlist view
 def user_wishlist (request):
     return render (request, "app/wishlist.html")
+
+# Category views
+# After models are setup might take arguments.
+def product_category (request):
+    return render (request, "app/category_listing.html")
