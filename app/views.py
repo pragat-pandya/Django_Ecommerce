@@ -48,3 +48,8 @@ def user_wishlist (request):
 # After models are setup might take arguments.
 def product_category (request):
     return render (request, "app/category_listing.html")
+
+
+# Product PAGE
+def product (request):
+    return render (request, "app/product_details.html")
