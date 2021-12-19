@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path ("", views.index, name="index"),
@@ -13,5 +15,6 @@ urlpatterns = [
     path("myaddresses", views.user_addresses, name="myaddresses"),
     path("wishlist", views.user_wishlist, name="wishlist"),
     path("categories", views.product_category, name="categories"),
-    path("product", views.product, name="product")
-]
+    path("product", views.product, name="product"),
+    path("men", views.products_for_men, name="men")
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

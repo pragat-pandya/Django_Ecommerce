@@ -49,6 +49,12 @@ def user_wishlist (request):
 def product_category (request):
     return render (request, "app/category_listing.html")
 
+# Men product listing
+def products_for_men (request):
+    return render (request, "app/products_for_men.html", {
+
+    })
+
 
 # Product PAGE
 def product (request):

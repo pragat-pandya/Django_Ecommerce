@@ -1,0 +1,503 @@
+{% extends "app/layout.html" %}
+
+{% block title %} Category Name {% endblock %}
+
+{% block style %}
+.overlay {
+  position: realtive;
+}
+
+.overlay .close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+{% endblock %}
+
+
+{% block body %}
+
+<!--Path From Main Category to Current Category-->
+<section class="container p-2">
+  <p><a class="ugly" href="{% url 'index' %}">Home</a> / <a href="#" class="ugly">Main Category</a> / <a href="#" class="ugly">Sub Category</a></p>
+</section>
+
+
+<!--HEADING OF THE PAGE-->
+<section class="container p-2">
+  <p>
+    <h3 class="d-inline"><span class="border-bottom border-3 border-warning">Category Name</span></h3>
+    <span class="px-3">(Number of Products)</span>
+  </p>
+</section>
+
+
+<!--FILTERS AND PRODUCT LIST-->
+<section class="container">
+  <div class="d-lg-flex d-xl-flex d-xxl-flex d-md-flex d-sm-none d-none flex-nowrap">
+    <span style="opacity: 0.5;" class="fw-bold py-2">FILTERS</span>
+    <span style="opacity: 0.5;" class="fw-bold ms-auto py-2">SORT BY</span>
+    <div class="btn-group m-0">
+      <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-angle-down"></i>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item active" href="#" >Popular</a></li>
+        <li><a class="dropdown-item" href="#">New</a></li>
+        <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+        <li><a href="#" class="dropdown-item">Price: High to Low</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="d-none d-xxl-flex d-xl-flex d-lg-flex d-md-flex d-sm-none flex-column btn-group">
+        <button type="button" class="text-start my-1 btn btn-warning dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#Categories" aria-expanded="false" aria-controls="Categories">
+          Category
+        </button>
+        <div class="collapse" id="Categories">
+          <button class="dropdown-item active" type="button">cat1</button>
+          <button class="dropdown-item" type="button">cat2</button>
+          <button class="dropdown-item" type="button">cat3</button>
+        </div>
+
+        <button type="button" class="text-start my-1 btn btn-warning dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#Sizes" aria-expanded="false" aria-controls="Sizes">
+          Sizes
+        </button>
+        <div class="collapse" id="Sizes">
+          <button class="dropdown-item active" type="button">cat1</button>
+          <button class="dropdown-item" type="button">cat2</button>
+          <button class="dropdown-item" type="button">cat3</button>
+        </div>
+
+        <button type="button" class="text-start my-1 btn btn-warning dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#Colors" aria-expanded="false" aria-controls="Colors">
+          Colors
+        </button>
+        <div class="collapse" id="Colors">
+          <button class="dropdown-item active" type="button">cat1</button>
+          <button class="dropdown-item" type="button">cat2</button>
+          <button class="dropdown-item" type="button">cat3</button>
+        </div>
+
+        <button type="button" class="text-start my-1 btn btn-warning dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#Fit" aria-expanded="false" aria-controls="Fit">
+          Fit
+        </button>
+        <div class="collapse" id="Fit">
+          <button class="dropdown-item active" type="button">cat1</button>
+          <button class="dropdown-item" type="button">cat2</button>
+          <button class="dropdown-item" type="button">cat3</button>
+        </div>
+
+        <button type="button" class="text-start my-1 btn btn-warning dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#Sort" aria-expanded="false" aria-controls="Sort">
+          Sort By
+        </button>
+        <div class="collapse" id="Sort">
+          <button class="dropdown-item active" type="button">cat1</button>
+          <button class="dropdown-item" type="button">cat2</button>
+          <button class="dropdown-item" type="button">cat3</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-12 row p-2 ms-1">
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2 justify-content-center">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-2">
+        <!-- PRODUCT CARD 1-->
+        <a href="#" class="text-decoration-none">
+          <div class="card">
+            <div class="view overlay">
+              <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+              <i class="close me-1 my-1 far fa-lg fa-heart bg-light p-1"></i>
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5>Fantasy T-shirt</h5>
+              <p class="small text-muted text-uppercase">Shirts</p>
+              <hr>
+              <h6 class="mb-2">
+                <span class="text-success mr-1">$12.99</span>
+                <span class="text-danger"><s>$36.99</s></span>
+              </h6>
+              <button type="button" class="btn btn-outline-warning btn-sm mr-1 mb-2">
+                <i class="fas fa-shopping-cart pr-2"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-sm mr-1 mb-2">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--SUGGESTION CATEGORY-WISE FOR LARGE SCREENS-->
+<section>
+</section>
+
+{% endblock %}
